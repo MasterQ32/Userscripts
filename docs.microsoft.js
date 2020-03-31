@@ -10,5 +10,7 @@
 
 (function() {
     'use strict';
-    window.location.pathname = "/en-us" + window.location.pathname.substr(6);
+    if(! window.location.pathname.startsWith("/en-us")) {
+        window.location.pathname = "/en-us" + window.location.pathname.substr(6);
+    }
 })();
