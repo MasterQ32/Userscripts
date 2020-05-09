@@ -28,6 +28,16 @@
         params.delete("ref_");
     };
 
+    modules["www.humblebundle.com"] = function(params) {
+        params.delete("hmb_source");
+        params.delete("hmb_medium");
+        params.delete("hmb_campaign");
+    };
+
+    modules["store.steampowered.com"] = function(params) {
+        params.delete("snr");
+    };
+
     var module = modules[window.location.hostname];
     if(module !== undefined)
     {
